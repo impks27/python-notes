@@ -1,0 +1,183 @@
+Python Properties:
+- Strongly typed. It enforces data types so you can’t concatenate a string and a integer, for example.
+- Dynamically, implicitly typed. So, you don’t have to explicitly declare variable data types. Data types are enforced at runtime.
+- Case sensitive. For example, token and TOKEN are two different variables.
+- Object-oriented. Everything is an object.
+
+Version: python -V
+Python 3.7.0
+
+Currently, there are two main versions of Python - 2.x and 3.x.
+
+Python 2:
+>>> print "Python is fun!"
+
+Python 3:
+>>> print("Python is fun!")
+If you’re running Python 2.x, the print command is a statement rather than a function in Python 3.x.
+
+You should see: Python is fun!
+
+Once done, you can use exit() to leave the Python Shell. Or:
+Mac and Linux users: Ctrl+D and then press Enter
+Windows users: Ctrl+D and then press Enter
+-------------------------------------------------------------------------------
+
+Built-in Data Types
+Python has a number of built-in data types such as numbers (integers, floats, complex numbers), strings, lists, tuples, and dictionaries.
+
+Each of these can be manipulated using:
+
+Operators
+Functions
+Data-type methods
+------------------------------------------------------------------------------
+
+>>> num1 = 10
+>>> num2 = 9.99
+>>> num3 = num1 + num2
+>>> num3
+19.990000000000002
+-----------------------------------------------------------------------------
+float.is_integer() - tests if a float is finite:
+
+>>> (10.0).is_integer()
+True
+>>> (10.1).is_integer()
+False
+-----------------------------------------------------------------------------
+>>> len("sample")
+6
+
+slice() - given a start and stop value, you can access a set of, or single, character(s).
+
+>>> print("Hello"[2])
+l
+>>> print("Hello"[3])
+l
+>>> print("Hello"[0])
+H
+>>> print("Hello"[0:2])
+He
+---------------------------------------------------------------------------
+
+string.capitalize() - returns the string with the first letter capitalized.
+
+>>> str='jamie how'
+>>> str
+'jamie how'
+>>> str.capitalize()
+'Jamie how'
+>>>
+----------------------------------------------------------------------
+string.format() - you can easily format values into strings.
+
+>>> str2="John Snow"
+>>> result="Hello {}!".format(str2)
+>>> result
+'Hello John Snow!'
+----------------------------------------------------------------------
+>>> str3="              Yes Boss!   "
+>>> result=str3.strip()
+>>> result
+'Yes Boss!'
+----------------------------------------------------------------------
+List:
+>>> sample_list=[]
+>>> sample_list
+[]
+
+>>> sample_list2=[1,2,3,["A","B","C"],False,"Hey"]
+>>> sample_list2
+[1, 2, 3, ['A', 'B', 'C'], False, 'Hey']
+>>> print(sample_list2)
+[1, 2, 3, ['A', 'B', 'C'], False, 'Hey']
+
+>>> sample_list2[0]
+1
+>>> sample_list2[0:2]
+[1, 2]
+>>> sample_list2[1:4]
+[2, 3, ['A', 'B', 'C']]
+
+>>> sample_list2
+[1, 2, 3, ['A', 'B', 'C'], False, 'Hey']
+>>> sample_list2[-1]
+'Hey'
+
+>>> sample_list2[3]
+['A', 'B', 'C']
+>>> sample_list2[3][1]
+'B'
+
+>>> list1=['a','b','c']
+>>> list2=['aa','bb','cc']
+>>> result=list1+list2
+>>> result
+['a', 'b', 'c', 'aa', 'bb', 'cc']
+
+['a', 'aa', 'aaa', 'b', 'bb', 'c', 'cc']
+>>> result.append("aaa")
+>>> result.sort()
+>>> result
+['a', 'aa', 'aaa', 'aaa', 'b', 'bb', 'c', 'cc']
+
+>>> result
+['a', 'aa', 'aaa', 'aaa', 'b', 'bb', 'c', 'cc']
+>>> result.pop(1)
+'aa'
+>>> result
+['a', 'aaa', 'aaa', 'b', 'bb', 'c', 'cc']
+-----------------------------------------------------------------------
+
+Tuples:
+Tuples are similar to lists, but they are immutable - which means they cannot be changed after creation.
+
+>>> my_tuple=(1,2,"aa","bb")
+>>> my_tuple
+(1, 2, 'aa', 'bb')
+
+Often tuples are used for dictionary keys since they should (err, must) be immutable.
+
+>>> tuple1=(1,3)
+>>> tuple2=("Apple","Carrot")
+>>> tuple3=tuple1 + tuple2
+>>> tuple3
+(1, 3, 'Apple', 'Carrot')
+
+>>> list(tuple3)
+[1, 3, 'Apple', 'Carrot']
+
+>>> tuple3.pop(2)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'tuple' object has no attribute 'pop'
+>>> tuple3.sort()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'tuple' object has no attribute 'sort'
+>>> tuple3.reverse()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'tuple' object has no attribute 'reverse'
+>>> tuple3.append("tup")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'tuple' object has no attribute 'append'
+--------------------------------------------------------------------------------------
+Dictionaries:
+Dictionaries are a type of associative array (an object) implemented using hash tables containing key/value pairs. They are unordered.
+
+dict={1:
+... "John",2:"Sam",3:"Rob"}
+>>> dict
+{1: 'John', 2: 'Sam', 3: 'Rob'}
+
+>>> dict[1]
+'John'
+-------------------------------------------------------------------------------
+Comments:
+>>> # Comment
+... var = "Hello"
+>>> var
+'Hello'
