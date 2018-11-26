@@ -182,3 +182,24 @@ Comments:
 >>> var
 'Hello'
 -------------------------------------------------------------------------------
+Recursion:
+Recursion is a common mathematical and programming concept. It means that a function calls itself. This has the benefit of meaning that you can loop through data to reach a result.
+-------------------------------------------------------------------------------
+In Python, there are two types of code-based errors, syntax errors and exceptions.
+
+Syntax Errors
+We have already seen this error already - incorrect indentation. Syntax errors will prevent execution of the program. In this example, the if statement is missing a colon to end the statement. As you can see Python is very helpful to point out the error:
+
+Exceptions
+Exception errors occur during program execution. Python has a number of built-in exceptions.
+For example:
+
+>>> 12/0
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ZeroDivisionError: integer division or modulo by zero
+
+Semantic Errors
+Semantic errors are errors that happen as a result of one or more problems in logic.
+
+These errors can be more complex, because no error is generated. The code runs but generates unexpected and/or incorrect output, or no output. A classic example of this, would be an infinite loop that most new programmers experience at least once.
